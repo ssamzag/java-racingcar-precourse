@@ -1,10 +1,11 @@
 package racingcar.model;
 
+import racingcar.model.exception.OverMaxNameLengthException;
+import racingcar.model.exception.NullOrBlankException;
+
 import java.util.Objects;
 
 public class Name {
-    private static final String MAX_LENGTH_ERROR_MESSAGE = "이름은 5자를 초과할 수 없습니다.";
-    private static final String BLANK_ERROR_MESSAGE = "이름을 공백일 수 없습니다.";
     private static final int MAX_NAME_LENGTH = 5;
 
     private final String name;
@@ -16,10 +17,10 @@ public class Name {
 
     private void validate(String name) {
         if (isBlank(name)) {
-            throw new IllegalArgumentException(BLANK_ERROR_MESSAGE);
+            throw new NullOrBlankException();
         }
         if (name.length() > MAX_NAME_LENGTH) {
-            throw new IllegalArgumentException(MAX_LENGTH_ERROR_MESSAGE);
+            throw new OverMaxNameLengthException();
         }
     }
 

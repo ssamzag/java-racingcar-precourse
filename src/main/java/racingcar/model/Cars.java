@@ -1,11 +1,15 @@
 package racingcar.model;
 
+import racingcar.model.movingStrategy.RandomMove;
+
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
 public class Cars {
     private static final String DUPLICATED_CAR_NAME_ERROR_MESSAGE = "차 이름이 중복되었습니다.";
+
     private final List<Car> cars;
 
     public Cars(List<Car> cars) {
@@ -20,9 +24,9 @@ public class Cars {
         }
     }
 
-    public void moveCars(MovingStrategy movable) {
+    public void moveCars() {
         for (Car car : cars) {
-            car.move(movable);
+            car.move(new RandomMove());
         }
     }
 
@@ -50,5 +54,13 @@ public class Cars {
             sb.append(car.toString()).append("\r\n");
         }
         return sb.toString();
+    }
+
+    public List<String> getCarNames() {
+        List<String> cars = new ArrayList<>();
+        for (Car car : this.cars) {
+            cars.add(car.getName());
+        }
+        return cars;
     }
 }

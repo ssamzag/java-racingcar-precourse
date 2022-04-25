@@ -20,6 +20,5 @@ public class WinnerCarsTest {
                 new Car("g", 5)));
 
         assertThat(cars.findWinnerCars()).isEqualTo(winnerCars);
-
     }
 }

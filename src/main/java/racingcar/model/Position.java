@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Position {
     private static final String DASH = "-";
     private static final String TARGET = "\0";
+
     private int position;
 
     public Position() {

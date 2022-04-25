@@ -1,12 +1,16 @@
 package racingcar.model;
 
+import racingcar.model.movingStrategy.MovingStrategy;
+
 import java.util.Objects;
 
 public class Car {
     private static final int FORWARD_BEGIN_NUM = 4;
     private static final int FORWARD_END_NUM = 9;
+
     private final Name name;
     private final Position position;
+
     public Car(String name) {
         this(name, 0);
     }
@@ -32,6 +36,10 @@ public class Car {
         return this.position.getPosition();
     }
 
+    public String getName() {
+        return name.toString();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -47,7 +55,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return this.name + ": " + position;
+        return this.name + " : " + position;
     }
 
     public boolean isWinnerPosition(int position) {
