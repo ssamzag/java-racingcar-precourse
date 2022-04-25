@@ -1,8 +1,6 @@
 package racingcar.model;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Objects;
-import java.util.stream.IntStream;
 
 public class Position {
     private static final String DASH = "-";
@@ -17,7 +15,7 @@ public class Position {
         this.position = position;
     }
 
-    public void add() {
+    public void increase() {
         this.position++;
     }
 
@@ -41,5 +39,9 @@ public class Position {
     @Override
     public String toString() {
         return new String(new char[this.position]).replace(TARGET, DASH);
+    }
+
+    public boolean isMaxPosition(int position) {
+        return this.position >= position;
     }
 }

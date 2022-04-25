@@ -3,6 +3,8 @@ package racingcar.model;
 import java.util.Objects;
 
 public class Car {
+    private static final int FORWARD_BEGIN_NUM = 4;
+    private static final int FORWARD_END_NUM = 9;
     private final Name name;
     private final Position position;
     public Car(String name) {
@@ -15,8 +17,14 @@ public class Car {
     }
 
     public void move(int number) {
-        if (number >= 4 && number <= 9) {
-            position.add();
+        if (number >= FORWARD_BEGIN_NUM && number <= FORWARD_END_NUM) {
+            position.increase();
+        }
+    }
+
+    public void move(MovingStrategy movingStrategy) {
+        if (movingStrategy.movable()) {
+            position.increase();
         }
     }
 
@@ -40,5 +48,9 @@ public class Car {
     @Override
     public String toString() {
         return this.name + ": " + position;
+    }
+
+    public boolean isWinnerPosition(int position) {
+        return this.position.isMaxPosition(position);
     }
 }

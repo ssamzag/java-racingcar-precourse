@@ -24,20 +24,20 @@
 
 
 * [ ] 유효성 체크
-    * [ ] IllegalArgumentException 처리
-        * [ ] 이동조건 값 1 ~ 9의 범위에 없는 경우
+    * [X] IllegalArgumentException 처리
+        * [X] 이동조건 값 1 ~ 9의 범위에 없는 경우
         * [X] 차이름 5글자 초과
         * [X] 차이름 공백
-        * [ ] 차이름 중복
+        * [X] 차이름 중복
 
 * [ ] 도메인 객체 분리
     * [ ] RacingGame
         * [ ] TryCount 객체 포장
         * [ ] Cars 객체 포장
-        * [ ] Cars 이동
-        * [ ] 레이싱 상태
+        * [ ] 모든차 이동
+        * [ ] 레이싱 상태 조회
     * [X] Car
-        * [ ] Movable 전략패턴
+        * [X] Movable 전략패턴
         * [X] Position 객체포장
         * [X] CarName 객체포장
         * [X] 이동상태 변경
@@ -46,18 +46,21 @@
             * [X] 글자가 5자 초과시 예외
             * [X] 공백일경우 예외
         * [X] 일급 컬렉션
-    * [ ] Cars
-        * [ ] 모든차 이동
+    * [X] Cars
+        * [X] 모든차 이동
+        * [X] 우승차들 조회
     * [X] Position
         * [X] Position 증가
         * [X] Position 값 생성자 초기화
-    * [ ] WinnerCars
-        * [ ] 우승차 찾기
-    * [ ] MovableStrategy
-        * [ ] NormalMove
+        * [X] Position 값 비교
+    * [X] WinnerCars
+        * [X] 가장 많이 이동한 차 조회
+    * [X] MovableStrategy
+        * [X] RandomMove
     * [X] NumberGenerator
       * [X] 1~9 사이 숫자 생성
     * [ ] TryCount
         * [ ] 시도횟수 증가 
         * [ ] 시도횟수 초과시 예외
         * [ ] 시도횟수 기준 완료유무
+```
