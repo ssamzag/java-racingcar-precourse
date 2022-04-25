@@ -20,12 +20,6 @@ public class Car {
         this.position = new Position(position);
     }
 
-    public void move(int number) {
-        if (number >= FORWARD_BEGIN_NUM && number <= FORWARD_END_NUM) {
-            position.increase();
-        }
-    }
-
     public void move(MovingStrategy movingStrategy) {
         if (movingStrategy.movable()) {
             position.increase();
