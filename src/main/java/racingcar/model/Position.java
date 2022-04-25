@@ -23,6 +23,10 @@ public class Position {
         return this.position;
     }
 
+    public boolean isMaxPosition(int position) {
+        return this.position >= position;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -41,7 +45,4 @@ public class Position {
         return new String(new char[this.position]).replace(TARGET, DASH);
     }
 
-    public boolean isMaxPosition(int position) {
-        return this.position >= position;
-    }
 }
