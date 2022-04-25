@@ -5,9 +5,6 @@ import racingcar.model.movingStrategy.MovingStrategy;
 import java.util.Objects;
 
 public class Car {
-    private static final int FORWARD_BEGIN_NUM = 4;
-    private static final int FORWARD_END_NUM = 9;
-
     private final Name name;
     private final Position position;
 
