@@ -15,44 +15,49 @@
 
 
 * [ ] 도메인별 기능
-    * [ ] 1 ~ 9 랜덤숫자 생성
-    * [ ] 차 이동 조건
-        * [ ] 값이 4 ~ 9 사이일 경우
-    * [ ] 우승자 조회
+    * [ ] 자동차 이름 쉼표(,)를 기준으로 n대 입력받음
+    * [ ] 이동할 횟수 입력받음
+    * [X] 1 ~ 9 랜덤숫자 생성
+    * [X] 차 이동
+        * [X] 랜덤 값이 4 ~ 9 사이일 경우만 이동
+    * [ ] 우승차 조회
 
 
 * [ ] 유효성 체크
     * [ ] IllegalArgumentException 처리
         * [ ] 이동조건 값 1 ~ 9의 범위에 없는 경우
-        * [ ] 차이름 5글자 초과
-        * [ ] 차이름 공백일 경우
+        * [X] 차이름 5글자 초과
+        * [X] 차이름 공백
         * [ ] 차이름 중복
 
 * [ ] 도메인 객체 분리
     * [ ] RacingGame
-    * [ ] Car
+        * [ ] TryCount 객체 포장
+        * [ ] Cars 객체 포장
+        * [ ] Cars 이동
+        * [ ] 레이싱 상태
+    * [X] Car
         * [ ] Movable 전략패턴
-        * [ ] 생성자 인자 Position 객체로 변경
-        * [ ] Position 비교 메서드
-        * [ ] CarName 객체 적용
-        * [ ] Position 객체 적용
-        * [ ] TryCount 객체 적용
-    * [ ] CarName
-        * [ ] 유효성체크
-            * [ ] 글자가 5자 초과시 예외
-            * [ ] 공백일경우 예외
-        * [ ] 일급 컬렉션
+        * [X] Position 객체포장
+        * [X] CarName 객체포장
+        * [X] 이동상태 변경
+    * [X] Name
+        * [X] 유효성체크
+            * [X] 글자가 5자 초과시 예외
+            * [X] 공백일경우 예외
+        * [X] 일급 컬렉션
     * [ ] Cars
         * [ ] 모든차 이동
-    * [ ] Position
-        * [ ] Position 증가
-        * [ ] Position 값 생성자 초기화
-        * [ ] Position 비교 메서드
+    * [X] Position
+        * [X] Position 증가
+        * [X] Position 값 생성자 초기화
     * [ ] WinnerCars
         * [ ] 우승차 찾기
     * [ ] MovableStrategy
         * [ ] NormalMove
-    * [ ] Random
+    * [X] NumberGenerator
+      * [X] 1~9 사이 숫자 생성
     * [ ] TryCount
+        * [ ] 시도횟수 증가 
         * [ ] 시도횟수 초과시 예외
         * [ ] 시도횟수 기준 완료유무
