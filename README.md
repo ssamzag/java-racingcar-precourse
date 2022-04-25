@@ -7,81 +7,22 @@
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
 
 ## 기능 요구사항
-* 주어진횟수동안n대의자동차는전진또는멈출수있다.
-* 각자동차에이름을부여할수있다.전진하는자동차를출력할때자동차이름을같이출력한다.
-* 자동차이름은쉼표(,)를기준으로구분하며이름은5자이하만가능하다.
-* 사용자는몇번의이동을할것인지를입력할수있어야한다.
-* 전진하는조건은0에서9사이에서random값을구한후random값이4이상일경우전진하고,3이하의값이면멈
+* 주어진 횟수동안 n대의 자동차는 전진 또는 멈출 수 있다.
+* 각 자동차에 이름을 부여할 수 있다. 전진하는 자동차를 출력할 때 자동차 이름을 같이 출력한다.
+* 자동차 이름은 쉼표(,)를 기준으로 구분하며 이름은 5자 이하만 가능하다.
+* 사용자는 몇 번의 이동을 할 것인지를 입력할 수 있어야 한다.
+* 전진하는 조건은 0에서 9사이에서 random 값을 구한 후 random 값이 4이상일 경우 전진하고, 3이하의 값이면 멈
 춘다.
-* 자동차경주게임을완료한후누가우승했는지를알려준다.
-* 우승자가한명이상일경우,쉼표(,)로이름을구분해출력한다.
-* 사용자가잘못된값을입력할경우IllegalArgumentException를발생시키고,"[ERROR]"로시작하는에러메시지를
-출력후그부분부터입력을다시받는다.
-* Exception이아닌IllegalArgumentException,IllegalStateException등과같은명확한유형을처리한다.
-기
+* 자동차 경주 게임을 완료한 후 누가 우승했는지를 알려준다.
+* 우승자가 한 명 이상일 경우,쉼표(,)로 이름을 구분해 출력한다.
+* 사용자가 잘못된 값을 입력할 경우 IllegalArgumentException를 발생시키고, "[ERROR]"로 시작하는 에러메시지를
+ 출력 후 그 부분부터 입력을 다시 받는다.
+* Exception이 아닌IllegalArgumentException, IllegalStateException 등과 같은 명확한유형을 처리한다.
 
 ## 입출력 요구사항
-![img.png](img.png)
+![img.png](docs/img.png)
 
 ## 프로그램 실행 결과 예시
-![img_1.png](img_1.png)
+![img_1.png](docs/img_1.png)
 ## 자동차 경주 구현 목록
-
-* [ ] 입력 View
-    * [ ] 자동차 시도횟수 메시지 출력 및 입력
-    * [ ] 자동차 이름 메시지 출력 및 입력
-
-
-* [ ] 출력 View
-    * [ ] 자동차 이름과 문자 "-" 을 출력
-      > pobi: ---<br>
-      you: -----
-
-    * [ ] 우승차 출력 메시지
-      > 최종 우승: pobi, you
-
-
-* [ ] 도메인별 기능
-    * [ ] 1 ~ 9 랜덤숫자 생성
-    * [ ] 차 이동 조건
-        * [ ] 값이 4 ~ 9 사이일 경우
-    * [ ] 우승자 조회
-
-
-* [ ] 유효성 체크
-    * [ ] IllegalArgumentException 처리
-        * [ ] 이동조건 값 1 ~ 9의 범위에 없는 경우
-        * [ ] 차이름 5글자 초과
-        * [ ] 차이름 공백일 경우
-        * [ ] 차이름 중복
-
-* [ ] 도메인 객체 분리
-    * [ ] RacingGame
-    * [ ] Car
-        * [ ] Movable 전략패턴
-        * [ ] 생성자 인자 Position 객체로 변경
-        * [ ] Position 비교 메서드
-        * [ ] CarName 객체 적용
-        * [ ] Position 객체 적용
-        * [ ] TryCount 객체 적용
-    * [ ] CarName
-        * [ ] 유효성체크
-            * [ ] 글자가 5자 초과시 예외
-            * [ ] 공백일경우 예외
-        * [ ] 일급 컬렉션
-    * [ ] Cars
-        * [ ] 모든차 이동
-    * [ ] Position
-        * [ ] Position 증가
-        * [ ] Position 값 생성자 초기화
-        * [ ] Position 비교 메서드
-    * [ ] WinnerCars
-        * [ ] 우승차 찾기
-    * [ ] MovableStrategy
-        * [ ] NormalMove
-    * [ ] Random
-    * [ ] TryCount
-        * [ ] 시도횟수 초과시 예외
-        * [ ] 시도횟수 기준 완료유무
-
-----------------
+* [docs/README.md](docs/README.md)
